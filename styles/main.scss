@@ -1,7 +1,100 @@
+@import "variables";
+@import "mixins";
+
 body {
-    background-color: $primary-color;
+  font-family: $font-family;
+  overflow-x: hidden;
+  & * {
+    box-sizing: border-box;
+  }
 }
 
-h1 {
-    color: $secondary-color;
+a {
+  cursor: pointer;
+  text-decoration: none;
+   transition: $trans;
+}
+
+button, input, select {
+  cursor: pointer;
+  padding: 0;
+  transition: $trans;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+input, select {
+  background-color: #fff;
+  border: thin solid $inputColor;
+  border-radius: 5px;
+  font-size: 24px;
+  height: 50px;
+  padding: 0 15px;
+}
+
+a:focus, button:focus, button:active, input:focus, input:checked, select:focus {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+.btn {
+  background-color: $yellowColor;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  width: 100%;
+  &:hover {
+    background-color: lighten($yellowColor, 8%);
+  }
+}
+
+.container {
+  padding: 0 50px;
+}
+.flex {
+  display: flex;
+}
+
+.bg-container {
+  background: url('../assets/img/fon2.jpg') fixed;
+  background-size: cover;
+  padding: 10px;
+  min-height: 100%;
+  width: 100%;
+}
+
+.transparent-layer {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 30px 60px;
+  width: 100%;
+}
+
+.header {
+  background-color: transparentize($yellowColor,.2);
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 10px 0;
+  .flex {
+    align-items: center;
+  }
+  &__logo {
+    opacity: .5;
+  }
+  &__title {
+    font-size: 36px;
+    margin-left: 40px;
+  }
+}
+
+.main-container {
+  background-color: $bgColor;
+  border-radius: 5px;
+  padding: 50px 0;
 }

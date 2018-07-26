@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+//font
+
+$font-family: 'Roboto', sans-serif;
+
+
+//transition
+
+$trans: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+
+// color
+
+$yellowColor: #FBED6A;
+$grayColor: #666;
+$bgColor: #f7f7f5;
+$inputColor: #d1d1d1;
+$labelColor: #6B6B69;
+
+
+//screens
+
+$media-desktop-only: '(max-width: 1100px) and (min-width: 600px)';
+$media-mobile: '(max-width: 599px)';

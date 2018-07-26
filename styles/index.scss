@@ -1,2 +1,32 @@
-@import './colors.scss';
-@import './main.scss';
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "main";
+
+.registration {
+  .flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__group {
+    width: calc(50% - 15px);
+  }
+  &__row {
+    margin-bottom: 15px;
+    &_nowrap {
+      display: flex;
+    }
+  }
+  &__label {
+    color: $labelColor;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  &__input {
+    width: 100%;
+    &_textarea {
+      height: 100px;
+    }
+  }
+}

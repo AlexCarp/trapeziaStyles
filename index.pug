@@ -1,7 +1,58 @@
 head
-	meta(charset='utf-8')
-	meta(http-equiv='X-UA-Compatible', content='IE=edge')
-	meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-	title VStyle
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  link(rel="icon" sizes="32x32" type="image/png" href="assets/img/favicon-32.png")
+  title VStyle
 body
-	h1 Have a good day, my darling.
+  .bg-container
+    .transparent-layer
+      .header
+        .container
+          .flex
+            a(href="#")
+              img(src="assets/img/logo.png").header__logo
+            p.header__title Регистрация
+      .main-container
+        .container
+          .registration
+            form(action="/addUser" method="post")
+              .flex
+                .registration__group
+                  .registration__row
+                    label(for="lastName").registration__label Фамилия
+                    input(type="text" name="lastName" autofocus="")#lastName.registration__input
+                  .registration__row
+                    label(for="firstName").registration__label Имя
+                    input(type="text" name="firstName")#firstName.registration__input
+                  .registration__row
+                    label(for="middleName").registration__label Отчество
+                    input(type="text"  name="middleName")#middleName.registration__input
+                .registration__group
+                  .registration__row
+                    label(for="phone").registration__label Телефон
+                    input(type="text" name="phone" pattern="[+][0-9 ]+" value="+375 ")#phone.registration__input
+                  .registration__row
+                    label(for="eMail").registration__label E-mail
+                    input(type="text" name="meMail")#eMail.registration__input
+                  .registration__row
+                    label(for="document").registration__label Документ
+                    input(type="text" name="document")#document.registration__input
+              .flex
+                .registration__group
+                  .registration__row
+                    label(for="birthDate").registration__label Дата рождения
+                    input(type="date" name="birthDate")#birthDate.registration__input
+                  .registration__row.registration__row_nowrap
+                    .registration__label Пол
+                    input(type="radio" name="sex").registration__radio
+                    input(type="radio" name="sex").registration__radio
+                  .registration__row.registration__row_nowrap
+                    label(for="parentAgreed").registration__label Согласие родителей
+                    input(type="checkbox" name="parentAgreed")#parentAgreed.registration__checkbox
+                .registration__group
+                  .registration__row
+                    label(for="knowFrom").registration__label Узнали от
+                    input(type="textarea" name="knowFrom")#knowFrom.registration__input.registration__input_textarea
+                  .registration__row
+                    button(type="submit" name="knowFrom")#but.registration__button.btn Добавить
