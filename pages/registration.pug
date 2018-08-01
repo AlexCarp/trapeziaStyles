@@ -79,47 +79,4 @@ body
                     label(for="knowFrom").registration__label Узнали от
                     input(type="textarea" name="knowFrom")#knowFrom.registration__input.registration__input_textarea
                   .registration__row.registration__row_nowrap
-                    button(type="submit" name="knowFrom")#but.registration__button.btn Применить
-
-      .main-container
-        .container
-          .registration
-            form(action="/addUser" method="post")
-              .flex
-                .registration__group
-                  .registration__row
-                    label(for="subscriptionId").registration__label subscription Id
-                    input(type="text" name="subscriptionId" autofocus="")#subscriptionId.registration__input
-                  .registration__row
-                    label(for="clientId").registration__label client Id
-                    input(type="text" name="clientId" autofocus="")#clientId.registration__input
-                  .registration__row
-                    label(for="saleTime").registration__label Дата продажи
-                    input(type="text" name="lsaleTime" autofocus="")#saleTime.registration__input
-                  .registration__row
-                    label(for="firstDate").registration__label Дата начала
-                    input(type="text" name="firstDate")#firstDate.registration__input
-                .registration__group
-                  .registration__row
-                    label(for="lastDate").registration__label Дата окончания
-                    input(type="text"  name="lastDate")#lastDate.registration__input
-                  .registration__row
-                    label(for="counter").registration__label Осталось посещений
-                    input(type="text"  name="counter")#counter.registration__input
-                  .registration__row
-                    label(for="email").registration__label Тип абонемента
-                    select(name="type")#type.registration__input
-                      option(value="${subscription.type}") ${subscription.fancyName}
-                      option(value="22") 4 посещения в любое время, на месяц
-                      option(value="21") Абонемент безлимитный 'дневной'
-                      option(value="23") Абонемент безлимитный на месяц
-                      option(value="24") Групповые занятия с тренером для взрослых 4 раза в месяц
-                      option(value="25") Групповые детские занятия с тренером 1 раз в неделю
-                      option(value="26") Групповые детские занятия с тренером 2 раз в неделю
-                  .registration__row
-                    label(for="current").registration__label Действителен
-                    select(name="current")#current.registration__input
-                      option(value="${subscription.current}") Да
-                      option(value="0") Нет
-                  .registration__row.registration__row_nowrap
-                    button(type="submit" name="knowFrom")#but2.registration__button.btn Применить
+                    button(type="submit" name="knowFrom")#but.registration__button.btn Добавить
