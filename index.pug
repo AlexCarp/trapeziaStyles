@@ -45,14 +45,38 @@ body
                     input(type="date" name="birthDate")#birthDate.registration__input
                   .registration__row.registration__row_nowrap
                     .registration__label Пол
-                    input(type="radio" name="sex").registration__radio
-                    input(type="radio" name="sex").registration__radio
+                    .registration__switcher.switcher
+                      .switcher__container
+                        input(type="radio" name="sex")#left.switcher__radio.switcher__radio_left
+                        input(type="radio" name="sex")#right.switcher__radio.switcher__radio_right
+                        label(for="left").switcher__label.switcher__label_left
+                          .switcher__pseudo-radio.switcher__pseudo-radio_left
+                        label(for="right").switcher__label.switcher__label_right
+                          .switcher__pseudo-radio.switcher__pseudo-radio_right
+                        .switcher__toggle
+                        .switcher__title.switcher__title_left
+                          svg(version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024")
+                            title
+                            g#icomoon-ignore
+                            path(fill="#000" d="M627.681 0.004c-218.554 0-396.319 177.765-396.319 396.319 0 218.52 177.799 396.319 396.319 396.319s396.319-177.799 396.319-396.319c0-218.554-177.765-396.319-396.319-396.319zM627.681 724.376c-180.871 0-328.053-147.181-328.053-328.053s147.183-328.053 328.053-328.053 328.053 147.181 328.053 328.053-147.147 328.053-328.053 328.053z")
+                            path(fill="#000" d="M393.597 630.407c-13.346-13.346-34.918-13.346-48.264 0l-335.323 335.323c-13.346 13.346-13.346 34.918 0 48.264 6.656 6.656 15.394 10 24.132 10s17.476-3.344 24.132-10l335.323-335.321c13.346-13.346 13.346-34.918 0-48.266z")
+                            path(fill="#000" d="M320.483 965.73l-262.21-262.21c-13.346-13.346-34.918-13.346-48.264 0s-13.346 34.918 0 48.264l262.21 262.21c6.656 6.656 15.394 10 24.132 10s17.476-3.344 24.132-10c13.346-13.344 13.346-34.918 0-48.264z")
+                        .switcher__title.switcher__title_right
+                          svg(version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024")
+                            title
+                            g#icomoon-ignore
+                            path(fill="#000" d="M394.956 233.198c-217.804 0-394.956 177.188-394.956 394.958 0 217.804 177.152 394.99 394.956 394.99 217.77 0 394.956-177.186 394.956-394.99s-177.15-394.958-394.956-394.958zM394.956 954.846c-180.156 0-326.69-146.568-326.69-326.69s146.536-326.656 326.69-326.656 326.69 146.534 326.69 326.656-146.534 326.69-326.69 326.69z")
+                            path(fill="#000" d="M1010.312 12.766c-13.346-13.346-34.918-13.346-48.264 0l-333.994 333.96c-13.346 13.312-13.346 34.918 0 48.264 6.656 6.656 15.394 10.002 24.132 10.002s17.476-3.312 24.132-10.002l333.994-333.96c13.346-13.312 13.346-34.918 0-48.264z")
+                            path(fill="#000" d="M989.866 0.854c-18.876 0-34.134 15.292-34.134 34.134v191.146c0 18.842 15.258 34.134 34.134 34.134s34.134-15.26 34.134-34.134v-191.148c0-18.842-15.258-34.132-34.134-34.132z")
+                            path(fill="#000" d="M989.866 0.854h-223.026c-18.876 0-34.134 15.292-34.134 34.134s15.258 34.134 34.134 34.134h223.028c18.876 0 34.134-15.292 34.134-34.134-0.002-18.844-15.26-34.134-34.136-34.134z")
                   .registration__row.registration__row_nowrap
-                    label(for="parentAgreed").registration__label Согласие родителей
-                    input(type="checkbox" name="parentAgreed")#parentAgreed.registration__checkbox
+                    label(for="parentAgreed").registration__checkbox.checkbox
+                      .registration__label Согласие родителей
+                      input(type="checkbox" name="parentAgreed")#parentAgreed.checkbox__input
+                      .checkbox__pseudo-input
                 .registration__group
                   .registration__row
                     label(for="knowFrom").registration__label Узнали от
                     input(type="textarea" name="knowFrom")#knowFrom.registration__input.registration__input_textarea
-                  .registration__row
+                  .registration__row.registration__row_nowrap
                     button(type="submit" name="knowFrom")#but.registration__button.btn Добавить

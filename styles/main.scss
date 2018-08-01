@@ -25,11 +25,16 @@ button, input, select {
 
 input, select {
   background-color: #fff;
-  border: thin solid $inputColor;
+  border: 1px solid $inputColor;
   border-radius: 5px;
+  color: $labelColor;
   font-size: 24px;
   height: 50px;
+  margin: 0;
   padding: 0 15px;
+  @include placeholder {
+    color: $labelColor;
+  }
 }
 
 a:focus, button:focus, button:active, input:focus, input:checked, select:focus {
@@ -41,6 +46,7 @@ a:focus, button:focus, button:active, input:focus, input:checked, select:focus {
   background-color: $yellowColor;
   border: none;
   border-radius: 5px;
+  color: $labelColor;
   display: block;
   height: 50px;
   font-size: 20px;
