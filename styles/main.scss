@@ -2,6 +2,7 @@
 @import "mixins";
 
 body {
+  color: $labelColor;
   font-family: $font-family;
   overflow-x: hidden;
   & * {
@@ -27,7 +28,6 @@ input, select, textarea {
   background-color: #fff;
   border: 1px solid $inputColor;
   border-radius: 5px;
-  color: $labelColor;
   font-size: 24px;
   height: 50px;
   margin: 0;

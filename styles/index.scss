@@ -24,7 +24,6 @@
     }
   }
   &__label {
-    color: $labelColor;
     display: block;
     font-size: 20px;
     margin-bottom: 10px;
@@ -207,6 +206,181 @@
     }
     &:after {
       opacity: 1;
+    }
+  }
+}
+
+.climber-list {
+  &__head {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  .total {
+    &__number {
+      padding-left: 20px;
+    }
+  }
+
+  .flex-table {
+    background-color: #fff;
+    position: relative;
+    &__container {
+      height: 200px;
+      overflow-x: visible;
+      overflow-y: auto;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+    &__row {
+      border-bottom: 2px solid $bgColor;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 30px;
+      &.flex {
+        justify-content: space-between;
+      }
+    }
+    &__number {
+      width: 50px;
+    }
+    &__name {
+      flex-grow: 1;
+    }
+    &__first-name {
+      padding-right: 20px;
+    }
+  }
+
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    &__effect {
+      position: absolute;
+      z-index: 1;
+      &_top {
+        top: 0;
+        left: 0;
+        Background: radial-gradient(farthest-side at 50% 0%, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0)) 100% 0;
+        background-repeat: no-repeat;
+        background-size: 100% 3px;
+        width: inherit;
+        height: 5px;
+      }
+      &_bottom {
+        bottom: 0;
+        left: 0;
+        Background: radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0)) 0 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 3px;
+        width: inherit;
+        height: 5px;
+      }
+    }
+  }
+
+  .scroll-shadow {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      height: 20px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+    }
+    &:before {
+      background: linear-gradient(to top, rgba(255, 255, 255, 0) 15px, #ffffff) bottom/100% 100%;
+      top: 0;
+    }
+    &:after {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 15px, #ffffff) top/100% 100%;
+      bottom: 0;
+    }
+  }
+
+  .search {
+    &__icon {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 20px;
+      vertical-align: middle;
+      path {
+        fill: $labelColor;
+      }
+    }
+    &__select {
+      position: relative;
+    }
+    &__input {
+      height: 40px;
+    }
+    &__dropdown {
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 5;
+    }
+  }
+
+  .dropdown {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px 0 #e0dfdf;;
+    margin-top: 3px;
+    &__item {
+      border-top: 2px solid $bgColor;
+      color: $labelColor;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 30px;
+      &:first-child {
+        border-top: none;
+      }
+      &_btn {
+        border-radius: 0;
+        border-top: none;
+        cursor: pointer;
+        font-size: 16px;
+        position: relative;
+      }
+    }
+    &__icon {
+      cursor: pointer;
+      opacity: 0;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: scale(.5);
+      transition: $trans;
+      &:before, &:after {
+        background: $labelColor;
+        content: '';
+        display: block;
+        height: 2px;
+        width: 20px;
+      }
+      &:after {
+        margin-top: -2px;
+        transform: rotate(90deg);
+      }
+    }
+    .dropdown__item_btn:hover .dropdown__icon {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }
