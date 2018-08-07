@@ -33,6 +33,8 @@
     width: 100%;
     &_textarea {
       height: 100px;
+      padding-bottom: 10px;
+      padding-top: 10px;
     }
   }
 
@@ -159,6 +161,7 @@
     background-color: #fff;
     border: solid 1px $inputColor;
     border-radius: 5px;
+    cursor: pointer;
     display: block;
     height: 35px;
     position: relative;

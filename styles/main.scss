@@ -15,7 +15,7 @@ a {
    transition: $trans;
 }
 
-button, input, select {
+button, input, select, textarea {
   cursor: pointer;
   padding: 0;
   transition: $trans;
@@ -23,7 +23,7 @@ button, input, select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
-input, select {
+input, select, textarea {
   background-color: #fff;
   border: 1px solid $inputColor;
   border-radius: 5px;
@@ -36,14 +36,14 @@ input, select {
     color: $lightGrayColor;
   }
 }
-input.incorrect, select.incorrect {
+input.incorrect, select.incorrect, textarea.incorrect {
   border: 1px solid $incorrectColor;
 }
-input.correct, select.correct {
+input.correct, select.correct, textarea.correct {
   border: 1px solid $correctColor;
 }
 
-a:focus, button:focus, button:active, input:focus, input:checked, select:focus {
+a:focus, button:focus, button:active, input:focus, input:checked, select:focus, textarea:focus {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
@@ -57,6 +57,7 @@ a:focus, button:focus, button:active, input:focus, input:checked, select:focus {
   height: 50px;
   font-size: 20px;
   font-weight: 700;
+  min-width: 150px;
   padding: 10px;
   width: 100%;
   &:hover {
@@ -89,19 +90,21 @@ a:focus, button:focus, button:active, input:focus, input:checked, select:focus {
 }
 
 .header {
-  background-color: transparentize($yellowColor,.2);
+  background-color: transparentize($yellowColor,.25);
   border-radius: 5px;
   margin-bottom: 25px;
   padding: 10px 0;
+  position: relative;
   .flex {
     align-items: center;
+    justify-content: space-between;
   }
   &__logo {
     opacity: .5;
   }
-  &__title {
-    font-size: 36px;
-    margin-left: 40px;
+  &__btn {
+    box-shadow: 0 1px 5px 1px #e0d459;
+    width: 250px;
   }
 }
 

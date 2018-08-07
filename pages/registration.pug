@@ -12,7 +12,7 @@ body
           .flex
             a(href="#")
               img(src="assets/img/logo.png").header__logo
-            p.header__title Регистрация
+            button(type="button" onclick="javascript:window.location='/GetStatisticController'").header__btn.btn Статистика
       .main-container
         .container
           .registration
@@ -58,7 +58,7 @@ body
                           svg(version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024")
                             title
                             g#icomoon-ignore
-                            path(fill="#000" d="M627.681 0.004c-218.554 0-396.319 177.765-396.319 396.319 0 218.52 177.799 396.319 396.319 396.319s396.319-177.799 396.319-396.319c0-218.554-177.765-396.319-396.319-396.319zM627.681 724.376c-180.871 0-328.053-147.181-328.053-328.053s147.183-328.053 328.053-328.053 328.053 147.181 328.053 328.053-147.147 328.053-328.053 328.053z")
+                            path(fill="#000" d="M627.681 0.004c-218.554 0-396.319 177.765-396ф.319 396.319 0 218.52 177.799 396.319 396.319 396.319s396.319-177.799 396.319-396.319c0-218.554-177.765-396.319-396.319-396.319zM627.681 724.376c-180.871 0-328.053-147.181-328.053-328.053s147.183-328.053 328.053-328.053 328.053 147.181 328.053 328.053-147.147 328.053-328.053 328.053z")
                             path(fill="#000" d="M393.597 630.407c-13.346-13.346-34.918-13.346-48.264 0l-335.323 335.323c-13.346 13.346-13.346 34.918 0 48.264 6.656 6.656 15.394 10 24.132 10s17.476-3.344 24.132-10l335.323-335.321c13.346-13.346 13.346-34.918 0-48.266z")
                             path(fill="#000" d="M320.483 965.73l-262.21-262.21c-13.346-13.346-34.918-13.346-48.264 0s-13.346 34.918 0 48.264l262.21 262.21c6.656 6.656 15.394 10 24.132 10s17.476-3.344 24.132-10c13.346-13.344 13.346-34.918 0-48.264z")
                         .switcher__title.switcher__title_right
@@ -77,6 +77,6 @@ body
                 .registration__group
                   .registration__row
                     label(for="knowFrom").registration__label Узнали от
-                    input(type="textarea" name="knowFrom")#knowFrom.registration__input.registration__input_textarea
+                    textarea(name="knowFrom")#knowFrom.registration__input.registration__input_textarea
                   .registration__row.registration__row_nowrap
                     button(type="submit" name="knowFrom")#but.registration__button.btn Добавить
