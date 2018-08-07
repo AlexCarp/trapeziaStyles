@@ -12,7 +12,7 @@ body
           .flex
             a(href="#")
               img(src="assets/img/logo.png").header__logo
-            button(type="button" onclick="javascript:window.location='/GetStatisticController'").header__btn.btn Статистика
+            button(onclick="javascript:window.location='/GetStatisticController'").header__btn.btn Статистика
       .main-container
         .container
           .climber-list
@@ -20,13 +20,14 @@ body
               .climber-list__title.total
                 span.total__text Сейчас на скалодроме:
                 span.total__number 666
-              label.climber-list__action.search.flex
+              label.climber-list__action.search
                 svg(version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024").search__icon
                   title
                   g#icomoon-ignore
                   path(fill="#000" d="M1015.031 971.778l-248.848-248.848c66.753-76.743 107.168-176.873 107.168-286.311 0-240.901-195.945-436.619-436.619-436.619-240.901 0-436.619 195.945-436.619 436.619s195.945 436.619 436.619 436.619c109.439 0 209.568-40.415 286.311-107.168l248.848 248.848c5.903 5.903 13.85 9.082 21.57 9.082s15.667-2.952 21.57-9.082c11.807-11.807 11.807-31.333 0-43.14zM61.19 436.619c0-207.071 168.472-375.315 375.315-375.315 207.071 0 375.315 168.472 375.315 375.315s-168.245 375.542-375.315 375.542c-206.843 0-375.315-168.472-375.315-375.542z")
                 .search__select
                   input(type="text").search__input
+                  button.search__btn-close
                   .search__dropdown.show
                     ul.dropdown
                       li.dropdown__item

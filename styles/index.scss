@@ -312,14 +312,16 @@
   }
 
   .search {
+    position: relative;
     &__icon {
-      display: inline-block;
       height: 40px;
+      left: 10px;
       line-height: 40px;
-      margin-right: 20px;
-      vertical-align: middle;
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
       path {
-        fill: $labelColor;
+        fill: $lightGrayColor;
       }
     }
     &__select {
@@ -327,6 +329,35 @@
     }
     &__input {
       height: 40px;
+      padding-left: 50px;
+      padding-right: 35px;
+      width: 350px;
+    }
+    &__btn-close {
+      cursor: pointer;
+      height: 100%;
+      right: 0;
+      position: absolute;
+      top: 0;
+      width: 30px;
+      &:before, &:after {
+        background: $lightGrayColor;
+        content: '';
+        display: block;
+        height: 2px;
+        transform: rotate(45deg);
+        transition: $trans;
+        width: 20px;
+      }
+      &:after {
+        margin-top: -2px;
+        transform: rotate(135deg);
+      }
+      &:hover {
+        &:before, &:after {
+          background: $labelColor;
+        }
+      }
     }
     &__dropdown {
       left: 0;
