@@ -292,6 +292,7 @@
   }
 
   .scroll-shadow {
+    height: 100%;
     position: relative;
     &:before, &:after {
       content: '';
