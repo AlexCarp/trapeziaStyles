@@ -10,6 +10,14 @@ body {
   }
 }
 
+// hide css bug in Chrome
+
+#blockColorblindContent {
+  display: none;
+}
+
+//
+
 a {
   cursor: pointer;
   text-decoration: none;
